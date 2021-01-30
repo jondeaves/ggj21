@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Thief
   - Item
+  - Owner
   layers:
   - Default
   - TransparentFX

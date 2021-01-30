@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Item : MonoBehaviour
@@ -18,15 +16,17 @@ public class Item : MonoBehaviour
     {
         if (heldBy != null)
         {
-            this.transform.position = heldBy.transform.position + new Vector3(0, 1f, 0);
+            ItemHolder holder = heldBy.GetComponent<ItemHolder>();
+            this.transform.position = holder.m_HeldItemPosition.position;
         }
     }
+
+    /*
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Hit Player");
-            heldBy = col.gameObject;
+            ChangeOwner(col.gameObject);
         }
         else if (col.gameObject.CompareTag("Thief"))
         {
@@ -35,9 +35,15 @@ public class Item : MonoBehaviour
 
             if (wantsItem)
             {
-                heldBy = col.gameObject;
+                ChangeOwner(col.gameObject);
                 col.gameObject.GetComponent<HideAndAvoid>().GoToRandom();
             }
         }
+    }
+    */
+
+    public void ChangeOwner(GameObject owner)
+    {
+        heldBy = owner;
     }
 }
