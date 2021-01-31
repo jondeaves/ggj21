@@ -164,6 +164,6 @@ public class HideAndAvoid : MonoBehaviour
     void ExtraRotation()
     {
         Vector3 lookrotation = _agent.steeringTarget - transform.position;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookrotation), m_ExtraRotationSpeed * Time.deltaTime);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookrotation), m_ExtraRotationSpeed * Time.deltaTime);
     }
 }
