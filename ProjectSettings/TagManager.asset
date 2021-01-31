@@ -8,6 +8,8 @@ TagManager:
   - Item
   - Owner
   - RunMarker
+  - Panel
+  - TitleImage
   layers:
   - Default
   - TransparentFX
