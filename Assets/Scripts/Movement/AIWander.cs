@@ -22,11 +22,6 @@ public class AIWander : MonoBehaviour
     {
         m_Agent = GetComponent<NavMeshAgent>();
 
-        // Disabling auto-braking allows for continuous movement
-        // between points (ie, the agent doesn't slow down as it
-        // approaches a destination point).
-        m_Agent.autoBraking = false;
-
         GotoNextPoint();
     }
 
