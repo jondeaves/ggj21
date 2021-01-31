@@ -51,7 +51,7 @@ public class ItemHolder : MonoBehaviour
             if (isOwnItem)
             {
                 m_ItemHeld.GetComponent<Item>().ChangeOwner(col.gameObject, true);
-                GameObject.FindObjectOfType<GameManager>().m_CurrentDropoffCount += 1;
+                //GameObject.FindObjectOfType<GameManager>().m_CurrentDropoffCount += 1;
             } 
         }
     }
