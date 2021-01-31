@@ -20,18 +20,13 @@ public class Steal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!HasItem() && objectToSteal)
+        if(!HasItem() && objectToSteal.GetComponent<Item>().m_IsLocked && GetComponent<HideAndAvoid>().m_IsFinished == false)
         {
-            GetComponent<HideAndAvoid>().GoTo(objectToSteal.transform.position);
+            GetComponent<HideAndAvoid>().Cancel();
         }
-    }
-
-    void OnCollisionEnter(Collision col)
-    {
-        // If we have item and hit the player, give the item to the player
-        if(HasItem() &&  col.gameObject.CompareTag("Player"))
+        else if (!HasItem() && objectToSteal && !objectToSteal.GetComponent<Item>().m_IsLocked)
         {
-            objectToSteal.GetComponent<Item>().m_HeldBy = col.gameObject;
+            GetComponent<HideAndAvoid>().GoTo(objectToSteal.transform);
         }
     }
 }

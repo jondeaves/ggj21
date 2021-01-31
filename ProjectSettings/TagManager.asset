@@ -7,6 +7,7 @@ TagManager:
   - Thief
   - Item
   - Owner
+  - RunMarker
   layers:
   - Default
   - TransparentFX
