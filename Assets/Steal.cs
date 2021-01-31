@@ -9,7 +9,7 @@ public class Steal : MonoBehaviour
 
     public bool HasItem()
     {
-        return GameObject.ReferenceEquals(objectToSteal.GetComponent<Item>().heldBy, this.gameObject);
+        return GameObject.ReferenceEquals(objectToSteal.GetComponent<Item>().m_HeldBy, this.gameObject);
     }
 
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class Steal : MonoBehaviour
         // If we have item and hit the player, give the item to the player
         if(HasItem() &&  col.gameObject.CompareTag("Player"))
         {
-            objectToSteal.GetComponent<Item>().heldBy = col.gameObject;
+            objectToSteal.GetComponent<Item>().m_HeldBy = col.gameObject;
         }
     }
 }

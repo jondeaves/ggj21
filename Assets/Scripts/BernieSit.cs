@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BernieSit : MonoBehaviour
 {
-    public GameObject chair;
-    float timer = 0f;
+    public bool m_IsActive = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,15 +15,24 @@ public class BernieSit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        timer += Time.deltaTime;
-
-        if (timer >= 4 && GetComponent<Animator>().GetBool("IsSitting") == false)
+        if (GetComponentInParent<ItemHolder>().m_ItemHeld)
         {
-            chair.SetActive(true);
-            GetComponent<Animator>().SetBool("IsSitting", true);
+            m_IsActive = true;
+        }
+        else
+        {
+            m_IsActive = false;
+
+            if (GetComponent<Animator>().GetBool("IsSitting") == true)
+            {
+                GetComponent<Animator>().SetBool("IsSitting", false);
+            }
         }
 
 
+        if (m_IsActive && GetComponent<Animator>().GetBool("IsSitting") == false)
+        {
+            GetComponent<Animator>().SetBool("IsSitting", true);
+        }
     }
 }

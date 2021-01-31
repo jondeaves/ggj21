@@ -39,29 +39,4 @@ public class PlayerController : MonoBehaviour
     {
         m_PlayerControls.Player.Disable();
     }
-
-    void OnCollisionEnter(Collision col)
-    {
-        // Collided with owner while holding item
-        if (col.gameObject.CompareTag("Owner") && m_ItemHeld)
-        {
-            bool isOwnItem = GameObject.ReferenceEquals(col.gameObject.GetComponent<ItemOwner>().itemOwned, m_ItemHeld);
-
-            if (isOwnItem)
-            {
-                m_ItemHeld.GetComponent<Item>().ChangeOwner(col.gameObject);
-                m_ItemHeld = null;
-            }
-        }
-    }
-
-    void OnTriggerEnter(Collider col)
-    {
-        // Collided with an item we can hold
-        if (col.gameObject.CompareTag("Item"))
-        {
-            col.gameObject.GetComponent<Item>().ChangeOwner(this.gameObject);
-            m_ItemHeld = col.gameObject;
-        }
-    }
 }

@@ -5,10 +5,10 @@ using UnityEngine;
 public class ItemOwner : MonoBehaviour
 {
     [Tooltip("What item does this owner want returned to them")]
-    public GameObject itemOwned;
+    public GameObject m_ItemOwned;
 
     public bool HasItem { get
         {
-            return (itemOwned && GameObject.ReferenceEquals(itemOwned.GetComponent<Item>().heldBy, this.gameObject));
+            return (m_ItemOwned && GameObject.ReferenceEquals(m_ItemOwned.GetComponent<Item>().m_HeldBy, this.gameObject));
         } }
 }
