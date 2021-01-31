@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         m_RigidBody = GetComponent<Rigidbody>();
-        m_Animator = GetComponent<Animator>();
+        m_Animator = GetComponentInChildren<Animator>();
 
         m_PlayerControls = new GGJ21();
         m_PlayerControls.Player.Move.started += ctx => m_MoveVector = ctx.ReadValue<Vector2>();
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
         bool hasMoved = (m_MoveVector.x != 0 && m_MoveVector.y != 0);
         m_RigidBody.MovePosition(newPosition);
+        Debug.Log(newPosition);
         transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
 
         if (hasMoved && m_Animator.GetBool("IsRunning") == false)
