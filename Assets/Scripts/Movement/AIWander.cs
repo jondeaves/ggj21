@@ -33,7 +33,7 @@ public class AIWander : MonoBehaviour
 
     void Update()
     {
-        bool hasItem = GetComponent<ItemOwner>().HasItem;
+        bool hasItem = GetComponent<ItemOwner>() && GetComponent<ItemOwner>().HasItem;
         if (hasItem)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;

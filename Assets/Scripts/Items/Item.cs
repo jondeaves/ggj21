@@ -20,7 +20,7 @@ public class Item : MonoBehaviour
     {
         m_IsInTimeout = false;
         m_ChangeOwnerTimer = 0;
-        m_ChangeOwnerTimeout = 1;
+        m_ChangeOwnerTimeout = 0.2f;
     }
 
     // Update is called once per frame
