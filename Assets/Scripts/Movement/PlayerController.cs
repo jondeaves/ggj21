@@ -28,16 +28,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        float step = m_MovementSpeed * Time.deltaTime;
+        float step = m_MovementSpeed * Time.smoothDeltaTime;
         Vector3 newPosition = transform.position + (new Vector3(m_MoveVector.x, 0, m_MoveVector.y) * step);
         bool hasMoved = (m_MoveVector.x != 0 && m_MoveVector.y != 0);
 
         if (hasMoved)
         {
-            m_Agent.destination = newPosition;
+            //m_Agent.destination = newPosition;
         }
 
-        //m_RigidBody.MovePosition(newPosition);
+        m_RigidBody.MovePosition(newPosition);
         transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
 
         if (hasMoved && m_Animator.GetBool("IsRunning") == false)

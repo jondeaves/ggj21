@@ -25,7 +25,7 @@ public class AnimateBySpeed : MonoBehaviour
     {
         // Update animations based on movement speed
         // Should attack if our item is 'locked'
-        if (GetComponent<Steal>().objectToSteal.GetComponent<Item>().m_IsLocked && m_Agent.velocity.magnitude == 0 && m_Animator.GetBool("isAttacking") == false)
+        if (GetComponent<Steal>() != null && GetComponent<Steal>().objectToSteal.GetComponent<Item>().m_IsLocked && m_Agent.velocity.magnitude == 0 && m_Animator.GetBool("isAttacking") == false)
         {
             m_Animator.SetBool("isIdle", false);
             m_Animator.SetBool("isWalking", false);
