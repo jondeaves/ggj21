@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7822146268142337264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4428596248820136195}
+  m_Layer: 0
+  m_Name: Keanu-Reefs02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4428596248820136195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7822146268142337264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.245, y: 2.7307022, z: -11.61767}
+  m_LocalScale: {x: 0.18404247, y: 0.18404247, z: 0.18404247}
+  m_Children:
+  - {fileID: 6920710526091590281}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8673678901485794746
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4428596248820136195}
+    m_Modifications:
+    - target: {fileID: 1753119128885038897, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_Name
+      value: Keanu-Reefs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.42000046
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+--- !u!4 &6920710526091590281 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1753119128885038899, guid: e01947cb0e9563146a648ce5d5482ab1, type: 3}
+  m_PrefabInstance: {fileID: 8673678901485794746}
+  m_PrefabAsset: {fileID: 0}

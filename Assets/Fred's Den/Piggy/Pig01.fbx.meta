@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 5487ce8e6064ce84e9d808ff0f975543
+guid: 1b22636fc3283c84b831ab92610b1607
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -3286338619324156852
-    second: metarig.004|metarigAction.002
+      74: -9027478188125155498
+    second: Armature.004|Armature.001Action
   - first:
-      74: -8381881213930625227
-    second: metarig.004|metarigAction.004
+      74: 4867429941484902380
+    second: Armature.004|Armature.002Action
   - first:
-      74: 5390203153667199082
-    second: metarig.004|metarigAction.005
+      74: 4878437961922934291
+    second: Armature.004|Armature.002Action.001
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -41,11 +41,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: metarig.004|metarigAction.002
-      takeName: metarig.004|metarigAction.002
+      name: Armature.004|Armature.001Action
+      takeName: Armature.004|Armature.001Action
       internalID: 0
-      firstFrame: 7
-      lastFrame: 27
+      firstFrame: 11
+      lastFrame: 49
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -70,11 +70,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: metarig.004|metarigAction.004
-      takeName: metarig.004|metarigAction.004
+      name: Armature.004|Armature.002Action
+      takeName: Armature.004|Armature.002Action
       internalID: 0
       firstFrame: 0
-      lastFrame: 95
+      lastFrame: 31
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -99,18 +99,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: metarig.004|metarigAction.005
-      takeName: metarig.004|metarigAction.005
+      name: Armature.004|Armature.002Action.001
+      takeName: Armature.004|Armature.002Action.001
       internalID: 0
-      firstFrame: 47
-      lastFrame: 132
+      firstFrame: 0
+      lastFrame: 99
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
