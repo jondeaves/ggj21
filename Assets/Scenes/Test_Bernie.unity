@@ -1447,6 +1447,50 @@ Transform:
   m_Father: {fileID: 62100487}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1101268450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1101268452}
+  - component: {fileID: 1101268451}
+  m_Layer: 0
+  m_Name: GameManagerr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1101268451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101268450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305a2dd78751931419980daa41c2e051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CurrentDropoffCount: 0
+--- !u!4 &1101268452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101268450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 388.6081, y: 545.7556, z: -724.66504}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1534172858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4700659365908911004, guid: b012efb2a24b5ab49b6b3ef12a1e8ba5, type: 3}
@@ -1874,6 +1918,10 @@ PrefabInstance:
     - target: {fileID: 924711286467766880, guid: a16c253549a22274fbed1fdc87ee102f, type: 3}
       propertyPath: m_Name
       value: Perry
+      objectReference: {fileID: 0}
+    - target: {fileID: 924711286467766880, guid: a16c253549a22274fbed1fdc87ee102f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 924711286467766882, guid: a16c253549a22274fbed1fdc87ee102f, type: 3}
       propertyPath: m_ItemConstraint

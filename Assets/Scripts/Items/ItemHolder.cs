@@ -33,6 +33,10 @@ public class ItemHolder : MonoBehaviour
             (m_ItemConstraint == null || GameObject.ReferenceEquals(m_ItemConstraint, col.gameObject))
         )
         {
+            if (gameObject.CompareTag("Owner"))
+            {
+                GameObject.FindObjectOfType<GameManager>().m_CurrentDropoffCount += 1;
+            }
             col.gameObject.GetComponent<Item>().ChangeOwner(this.gameObject);
         }
     }
@@ -47,7 +51,8 @@ public class ItemHolder : MonoBehaviour
             if (isOwnItem)
             {
                 m_ItemHeld.GetComponent<Item>().ChangeOwner(col.gameObject, true);
-            }
+                GameObject.FindObjectOfType<GameManager>().m_CurrentDropoffCount += 1;
+            } 
         }
     }
 }
