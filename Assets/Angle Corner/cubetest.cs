@@ -8,7 +8,7 @@ public class cubetest : MonoBehaviour
       void Start()
     {
         UnityEngine.AI.NavMeshAgent m_Agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        m_Agent.destination = new Vector3(-6, 35, 13);
+        m_Agent.destination = new Vector3(-3, 0, 11);
     }
 
     // Update is called once per frame
