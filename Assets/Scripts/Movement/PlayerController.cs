@@ -8,13 +8,14 @@ public class PlayerController : MonoBehaviour
 
     private GGJ21 m_PlayerControls;
     private Rigidbody m_RigidBody;
-    private GameObject m_ItemHeld;
     private Vector2 m_MoveVector;
+    private Animator m_Animator;
 
     private void Awake()
     {
         m_RigidBody = GetComponent<Rigidbody>();
-        
+        m_Animator = GetComponent<Animator>();
+
         m_PlayerControls = new GGJ21();
         m_PlayerControls.Player.Move.started += ctx => m_MoveVector = ctx.ReadValue<Vector2>();
         m_PlayerControls.Player.Move.performed += ctx => m_MoveVector = ctx.ReadValue<Vector2>();
@@ -26,8 +27,18 @@ public class PlayerController : MonoBehaviour
         float step = m_MovementSpeed * Time.smoothDeltaTime;
         Vector3 newPosition = transform.position + (new Vector3(m_MoveVector.x, 0, m_MoveVector.y) * step);
 
+        bool hasMoved = (m_MoveVector.x != 0 && m_MoveVector.y != 0);
         m_RigidBody.MovePosition(newPosition);
-        //transform.LookAt(newPosition);
+        transform.LookAt(new Vector3(newPosition.x, newPosition.y, newPosition.z));
+
+        if (hasMoved && m_Animator.GetBool("IsRunning") == false)
+        {
+            m_Animator.SetBool("IsRunning", true);
+        }
+        else if (!hasMoved && m_Animator.GetBool("IsRunning") == true)
+        {
+            m_Animator.SetBool("IsRunning", false);
+        }
     }
 
     private void OnEnable()
