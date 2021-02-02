@@ -14,7 +14,10 @@ public class GameManager : MonoBehaviour
     {
         m_PlayerControls = new GGJ21();
         m_PlayerControls.Player.Cancel.canceled += ctx => SceneManager.LoadScene(0);
-        m_PlayerControls.Player.DebugWin.canceled += ctx => SceneManager.LoadScene(3);
+        if (Debug.isDebugBuild)
+        {
+            m_PlayerControls.Player.DebugWin.canceled += ctx => SceneManager.LoadScene(3);
+        }
     }
     void Start()
     {
